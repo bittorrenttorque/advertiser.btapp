@@ -15,6 +15,27 @@ __advertiser:receive__
 Is passed an object that was sent via Torque. You will (should?) receive your own messages. Keep in mind that other apps can send any information that they choose, so don't make any assumptions about what will exist.  
   
 
+### Creating torrents
+<div class="run" title="Run"></div>
+```javascript
+btapp.bt.browseforfiles(function () {}, function(files) {
+	_.each(files, function(value, key) {
+			btapp.bt.create(
+				function(ret) {
+					alert('called create for ' + value);
+				}, 
+				'', 
+				[value], 
+				function(hash) {
+					alert('torrent created for ' + value);
+				}
+			);
+	});
+});
+```
+
+
+
 #### Example
 To connect to the plugin client on your local machine...  
 ```javascript  
