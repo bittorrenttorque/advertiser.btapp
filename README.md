@@ -11,5 +11,5 @@ Simply listen for the two events.
 __advertiser:send__  
 Is passed an object with *image*, *link*, and *title* fields that you can fiddle with before the message is actually sent. By default they point to your site's icon, url, and title.
 
-__advertiser:receive__
+__advertiser:receive__  
 Is passed an object that was sent via Torque. You will (should?) receive your own messages. Keep in mind that other apps can send any information that they choose, so don't make any assumptions about what will exist.  
