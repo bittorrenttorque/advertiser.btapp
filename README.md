@@ -18,9 +18,12 @@ Is passed an object that was sent via Torque. You will (should?) receive your ow
 ### Creating torrents
 ```javascript
 btapp = new Btapp;  
-// You need to create the advertiser after connecting, as it will assert if your connect call's query filter doesn't include what the advertiser needs.  
-// If you decide to get fancy with your queries to reduce the data being transferred from the client, make sure your query strings looks something like the following...  
-// ['btapp/sendappmsg/', 'btapp/events/appMessage/']  ... the default of ['btapp/'] will also work of course.  
+// You need to create the advertiser after connecting, as it will assert if your connect 
+//call's query filter doesn't include what the advertiser needs.  If you decide to get fancy 
+//with your queries to reduce the data being transferred from the client, make sure your 
+//query strings looks something like the following...  
+// ['btapp/sendappmsg/', 'btapp/events/appMessage/']  ... 
+// the default of ['btapp/'] will also work of course.  
 ```
 
 
