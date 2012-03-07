@@ -29,4 +29,4 @@ advertiser = new BtappAdvertiser({
 advertiser.bind('all', _.bind(console.log, console));  
 ```
 
-You can see this work live [here](http://pwmckenna.github.com/btapp_advertiser/example/index.html "advertiser")
+You can see this in action [here](http://pwmckenna.github.com/btapp_advertiser/example/index.html "advertiser").
