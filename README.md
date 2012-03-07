@@ -18,18 +18,21 @@ Is passed an object that was sent via Torque. You will (should?) receive your ow
 #### Example
 To connect to the plugin client on your local machine...
 ```javascript
-var btapp = new Btapp;
+btapp = new Btapp;
+```
 // You need to create the advertiser after connecting, as it will assert if your connect call's query filter doesn't include what the advertiser needs.  
 // If you decide to get fancy with your queries to reduce the data being transferred from the client, make sure your query strings looks something like the following...  
 // ['btapp/sendappmsg/', 'btapp/events/appMessage/']  ... the default of ['btapp/'] will also work of course.  
+```javascript
 btapp.connect({
 	queries: ['btapp/sendappmsg/', 'btapp/events/appMessage/']
 });
 
-var advertiser = new BtappAdvertiser({
+advertiser = new BtappAdvertiser({
 	btapp: btapp
 });
 
-//now if you're curious what's happening behind the curtains, try the following.
 advertiser.bind('all', _.bind(console.log, console));
-```  
+```
+
+//The last line should just spit out the two messages as they happen. Feel free to provide an *interval* attribute to dictate how often messages are sent. The default is every three seconds.
