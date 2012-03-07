@@ -15,7 +15,7 @@ __advertiser:receive__
 Is passed an object that was sent via Torque. You will (should?) receive your own messages. Keep in mind that other apps can send any information that they choose, so don't make any assumptions about what will exist.  
   
 
-### Creating torrents
+### Usage:
 ```javascript
 btapp = new Btapp;  
 btapp.connect({  
@@ -28,18 +28,3 @@ advertiser = new BtappAdvertiser({
   
 advertiser.bind('all', _.bind(console.log, console));  
 ```
-
-
-
-#### Example
-To connect to the plugin client on your local machine...  
-```javascript  
-btapp = new Btapp;  
-```  
-// You need to create the advertiser after connecting, as it will assert if your connect call's query filter doesn't include what the advertiser needs.  
-// If you decide to get fancy with your queries to reduce the data being transferred from the client, make sure your query strings looks something like the following...  
-// ['btapp/sendappmsg/', 'btapp/events/appMessage/']  ... the default of ['btapp/'] will also work of course.  
-```javascript  
-```
-
-//The last line should just spit out the two messages as they happen. Feel free to provide an *interval* attribute to dictate how often messages are sent. The default is every three seconds.
