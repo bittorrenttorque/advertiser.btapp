@@ -4,7 +4,7 @@
 
 # Advertiser.btapp.js
 
-This provides an easy way for two sites to communicate with each other via Torque. Most importantly the toolbar is listening using the same functionality and will add a docked icon that launches your app if you send it a message.  
+This provides an easy way for two sites to communicate with each other via Torque. Most importantly the toolbar is listening using the same functionality and if you send it a message it will add a docked icon that can launch your app.  
   
 Simply listen for the two events.
 
