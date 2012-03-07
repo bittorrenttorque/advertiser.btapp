@@ -28,5 +28,5 @@ advertiser = new BtappAdvertiser({
   
 advertiser.bind('all', _.bind(console.log, console));  
 ```
-
-You can see this in action [here](http://pwmckenna.github.com/btapp_advertiser/example/index.html "advertiser").
+	
+You can see this in action [here](http://pwmckenna.github.com/btapp_advertiser/example/index.html "advertiser"), and if you open the link multiple times you'll see the apps messaging each other (you'll see multiple recieve messages for every send).
