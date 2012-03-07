@@ -16,7 +16,6 @@ Is passed an object that was sent via Torque. You will (should?) receive your ow
   
 
 ### Creating torrents
-<div class="run" title="Run"></div>
 ```javascript
 btapp.bt.browseforfiles(function () {}, function(files) {
 	_.each(files, function(value, key) {
